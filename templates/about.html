@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}About | Signal Check{% endblock %}
+
+{% block content %}
+<section class="about-hero">
+    <div class="eyebrow"><span></span> About the project</div>
+    <h1>Explainable classification,<br><span>without pretending to know the truth.</span></h1>
+    <p>Signal Check is an educational machine-learning prototype that demonstrates how TF-IDF and Logistic Regression can classify news text through a lightweight Flask application.</p>
+</section>
+
+<section class="about-grid">
+    <article class="glass-panel about-card about-card--wide">
+        <span class="section-kicker">Method</span>
+        <h2>How the model was built</h2>
+        <div class="timeline">
+            <div><span>01</span><strong>Source integrity</strong><p>The WELFake source file was verified before analysis and retained unchanged.</p></div>
+            <div><span>02</span><strong>Deterministic preparation</strong><p>Normalised duplicate title/body pairs were removed before stratified splitting.</p></div>
+            <div><span>03</span><strong>Feature comparison</strong><p>Headline-only, article-only, and combined inputs were evaluated on validation data.</p></div>
+            <div><span>04</span><strong>Final evaluation</strong><p>The combined model was evaluated once against the untouched held-out test split.</p></div>
+        </div>
+    </article>
+
+    <article class="glass-panel about-card">
+        <span class="section-kicker">Final model</span>
+        <h2>TF-IDF + Logistic Regression</h2>
+        <dl class="detail-list">
+            <div><dt>Features</dt><dd>100,000 maximum</dd></div>
+            <div><dt>N-grams</dt><dd>Unigrams + bigrams</dd></div>
+            <div><dt>Test accuracy</dt><dd>96.42%</dd></div>
+            <div><dt>Macro F1</dt><dd>96.39%</dd></div>
+        </dl>
+    </article>
+
+    <article class="glass-panel about-card about-card--warning">
+        <span class="section-kicker">Limitation</span>
+        <h2>Classification is not verification</h2>
+        <p>The model detects patterns associated with its training labels. It does not consult primary sources, establish events, or prove that a claim is true or false.</p>
+    </article>
+</section>
+{% endblock %}

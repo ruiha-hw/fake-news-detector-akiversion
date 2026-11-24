@@ -1,0 +1,6 @@
+﻿# Ignore downloaded dataset contents
+*
+
+# Keep the directory instructions and ignore policy
+!.gitignore
+!README.md

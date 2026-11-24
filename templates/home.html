@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Signal Check | News text classifier{% endblock %}
+
+{% block content %}
+<section class="hero" aria-labelledby="page-title">
+    <div class="hero-copy">
+        <div class="eyebrow"><span></span> Lightweight, explainable machine learning</div>
+        <h1 id="page-title">Read the signal.<br><span>Question the certainty.</span></h1>
+        <p class="hero-lede">
+            Enter a headline, article, or both. The model compares its language with patterns learned from the WELFake dataset and returns a transparent classification score.
+        </p>
+        <div class="hero-metrics" aria-label="Model summary">
+            <div><strong>96.42%</strong><span>held-out accuracy</span></div>
+            <div><strong>96.39%</strong><span>macro F1</span></div>
+            <div><strong>63,672</strong><span>unique records</span></div>
+        </div>
+    </div>
+
+    <aside class="method-card glass-panel" aria-label="How the classifier works">
+        <div class="method-card__header">
+            <span class="method-icon" aria-hidden="true">01</span>
+            <span>Classification pipeline</span>
+        </div>
+        <ol class="method-list">
+            <li><span>Input</span><strong>Headline + article</strong></li>
+            <li><span>Representation</span><strong>TF-IDF, 1–2 grams</strong></li>
+            <li><span>Decision</span><strong>Logistic Regression</strong></li>
+            <li><span>Output</span><strong>Class + probability</strong></li>
+        </ol>
+    </aside>
+</section>
+
+<section class="workspace" aria-label="Classification workspace">
+    <form class="classifier-card glass-panel" id="prediction-form" action="{{ url_for('main.predict') }}" method="post" novalidate data-max-characters="{{ maximum_characters }}">
+        <div class="section-heading">
+            <div>
+                <span class="section-kicker">Analyse text</span>
+                <h2>Check a news item</h2>
+            </div>
+            <span class="field-limit"><span id="character-count">0</span> / {{ "{:,}".format(maximum_characters) }}</span>
+        </div>
+
+        <div class="field-group">
+            <label for="title">Headline <span>optional</span></label>
+            <input id="title" name="title" type="text" autocomplete="off" placeholder="Paste the headline here">
+        </div>
+
+        <div class="field-group field-group--grow">
+            <label for="article">Article or claim <span>optional when a headline is provided</span></label>
+            <textarea id="article" name="article" rows="10" placeholder="Paste the article, claim, or excerpt here"></textarea>
+        </div>
+
+        <div class="form-message" id="form-message" role="alert" aria-live="polite" hidden></div>
+
+        <div class="form-actions">
+            <button class="primary-button" id="submit-button" type="submit">
+                <span class="button-label">Check classification</span>
+                <span class="button-loader" aria-hidden="true"></span>
+                <span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+            <button class="secondary-button" id="clear-button" type="button">Clear</button>
+        </div>
+    </form>
+
+    <section class="result-card glass-panel" id="result-card" aria-labelledby="result-title" aria-live="polite">
+        <div class="result-empty" id="result-empty">
+            <div class="signal-visual" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <h2 id="result-title">Awaiting analysis</h2>
+            <p>Your classification, probability balance, and interpretation guidance will appear here.</p>
+        </div>
+
+        <div class="result-content" id="result-content" hidden>
+            <div class="result-topline">
+                <span class="section-kicker">Model result</span>
+                <span class="result-badge" id="result-badge">Likely real</span>
+            </div>
+            <div class="confidence-block">
+                <div>
+                    <span>Classification confidence</span>
+                    <strong id="confidence-value">0%</strong>
+                </div>
+                <div class="confidence-track" aria-hidden="true"><span id="confidence-bar"></span></div>
+            </div>
+
+            <div class="probability-grid">
+                <div>
+                    <span>Fake-pattern probability</span>
+                    <strong id="fake-probability">0%</strong>
+                </div>
+                <div>
+                    <span>Real-pattern probability</span>
+                    <strong id="real-probability">0%</strong>
+                </div>
+            </div>
+
+            <div class="result-guidance">
+                <strong>Interpret carefully</strong>
+                <p id="result-disclaimer">This is a text classification, not factual verification.</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="principles" aria-label="Product principles">
+    <article class="principle-card">
+        <span>01</span><h3>Transparent</h3><p>Probabilities remain visible instead of being reduced to a verdict alone.</p>
+    </article>
+    <article class="principle-card">
+        <span>02</span><h3>Reproducible</h3><p>The model, split manifest, and source dataset are protected by recorded hashes.</p>
+    </article>
+    <article class="principle-card">
+        <span>03</span><h3>Bounded</h3><p>The interface clearly separates linguistic classification from real-world fact checking.</p>
+    </article>
+</section>
+{% endblock %}

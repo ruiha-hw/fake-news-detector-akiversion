@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -221,3 +222,55 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+=======
+# Python environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+
+# Local environment and secrets
+.env
+.env.*
+*.local
+secrets.json
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+~$*
+Thumbs.db
+.DS_Store
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+
+# Local render and test output
+_renders/
+report_render/
+simple_render/
+data/raw/WELFake_Dataset.csv
+
+# Visual Studio generated files
+obj/
+*.pyproj.user
+>>>>>>> team-version
