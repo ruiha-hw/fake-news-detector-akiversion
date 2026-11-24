@@ -1,0 +1,40 @@
+{
+  "source_dataset": "E:\\Repos\\FakeNews\\FakeNewsDetection\\data\\raw\\WELFake_Dataset.csv",
+  "source_md5": "73c9675a4b3d09f86a6933d0b8d7d908",
+  "random_state": 205,
+  "split_fractions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "preprocessing": {
+    "source_rows": 72134,
+    "output_rows": 63672,
+    "removed_duplicate_rows": 8462,
+    "removed_unusable_rows": 0,
+    "fake_rows": 34789,
+    "real_rows": 28883
+  },
+  "manifest_rows": 63672,
+  "split_counts": {
+    "test": 9551,
+    "train": 44570,
+    "validation": 9551
+  },
+  "class_counts": {
+    "test": {
+      "0": 5218,
+      "1": 4333
+    },
+    "train": {
+      "0": 24352,
+      "1": 20218
+    },
+    "validation": {
+      "0": 5219,
+      "1": 4332
+    }
+  },
+  "record_id_algorithm": "SHA-256 over the normalised title/body identity",
+  "manifest_sha256": "84503ca481f57c2de2330438571c4e5f857c382c0b74093320c4990048591e9a"
+}

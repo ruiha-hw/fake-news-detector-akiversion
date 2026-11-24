@@ -1,0 +1,620 @@
+{
+  "status": "validation_threshold_audit_complete",
+  "scope": "validation_only",
+  "test_split_used": false,
+  "model_changed": false,
+  "runtime_threshold_changed": false,
+  "selected_feature_mode": "combined",
+  "selected_pipeline_sha256": "ca36217f1e901ef4dc19ccd2e53233320654591c80482db0d9a270a43950051f",
+  "baseline_default_decision": {
+    "records": 9551,
+    "accuracy": 0.96272642,
+    "macro_precision": 0.96269012,
+    "macro_recall": 0.96208828,
+    "macro_f1": 0.9623781,
+    "mean_confidence": 0.89377717,
+    "minimum_confidence": 0.50017858,
+    "maximum_confidence": 0.99969544
+  },
+  "confidence_buckets": [
+    {
+      "lower_bound": 0.5,
+      "upper_bound": 0.55,
+      "range": "0.50-0.55",
+      "records": 184,
+      "share": 0.019265,
+      "mean_confidence": 0.52298504,
+      "observed_accuracy": 0.52717391,
+      "calibration_gap": 0.00418887,
+      "errors": 87
+    },
+    {
+      "lower_bound": 0.55,
+      "upper_bound": 0.6,
+      "range": "0.55-0.60",
+      "records": 218,
+      "share": 0.02282484,
+      "mean_confidence": 0.57369787,
+      "observed_accuracy": 0.68348624,
+      "calibration_gap": 0.10978837,
+      "errors": 69
+    },
+    {
+      "lower_bound": 0.6,
+      "upper_bound": 0.65,
+      "range": "0.60-0.65",
+      "records": 216,
+      "share": 0.02261543,
+      "mean_confidence": 0.62533918,
+      "observed_accuracy": 0.77777778,
+      "calibration_gap": 0.1524386,
+      "errors": 48
+    },
+    {
+      "lower_bound": 0.65,
+      "upper_bound": 0.7,
+      "range": "0.65-0.70",
+      "records": 246,
+      "share": 0.02575647,
+      "mean_confidence": 0.67564182,
+      "observed_accuracy": 0.8495935,
+      "calibration_gap": 0.17395168,
+      "errors": 37
+    },
+    {
+      "lower_bound": 0.7,
+      "upper_bound": 0.75,
+      "range": "0.70-0.75",
+      "records": 331,
+      "share": 0.03465606,
+      "mean_confidence": 0.72396105,
+      "observed_accuracy": 0.86404834,
+      "calibration_gap": 0.14008729,
+      "errors": 45
+    },
+    {
+      "lower_bound": 0.75,
+      "upper_bound": 0.8,
+      "range": "0.75-0.80",
+      "records": 413,
+      "share": 0.04324155,
+      "mean_confidence": 0.77671729,
+      "observed_accuracy": 0.94430993,
+      "calibration_gap": 0.16759264,
+      "errors": 23
+    },
+    {
+      "lower_bound": 0.8,
+      "upper_bound": 0.85,
+      "range": "0.80-0.85",
+      "records": 633,
+      "share": 0.06627578,
+      "mean_confidence": 0.82738091,
+      "observed_accuracy": 0.96050553,
+      "calibration_gap": 0.13312462,
+      "errors": 25
+    },
+    {
+      "lower_bound": 0.85,
+      "upper_bound": 0.9,
+      "range": "0.85-0.90",
+      "records": 1010,
+      "share": 0.10574809,
+      "mean_confidence": 0.87696876,
+      "observed_accuracy": 0.98811881,
+      "calibration_gap": 0.11115005,
+      "errors": 12
+    },
+    {
+      "lower_bound": 0.9,
+      "upper_bound": 0.95,
+      "range": "0.90-0.95",
+      "records": 2083,
+      "share": 0.21809235,
+      "mean_confidence": 0.92803079,
+      "observed_accuracy": 0.99519923,
+      "calibration_gap": 0.06716844,
+      "errors": 10
+    },
+    {
+      "lower_bound": 0.95,
+      "upper_bound": 1.0,
+      "range": "0.95-1.00",
+      "records": 4217,
+      "share": 0.44152445,
+      "mean_confidence": 0.97484353,
+      "observed_accuracy": 1.0,
+      "calibration_gap": 0.02515647,
+      "errors": 0
+    }
+  ],
+  "threshold_policy": [
+    {
+      "threshold": 0.5,
+      "total_records": 9551,
+      "decisive_records": 9551,
+      "uncertain_records": 0,
+      "coverage": 1.0,
+      "uncertain_rate": 0.0,
+      "selective_accuracy": 0.96272642,
+      "decisive_errors": 356,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 5251,
+        "precision_within_decisions": 0.96305466,
+        "errors": 194,
+        "mean_confidence": 0.90373067
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 4300,
+        "precision_within_decisions": 0.96232558,
+        "errors": 162,
+        "mean_confidence": 0.88162233
+      }
+    },
+    {
+      "threshold": 0.55,
+      "total_records": 9551,
+      "decisive_records": 9367,
+      "uncertain_records": 184,
+      "coverage": 0.980735,
+      "uncertain_rate": 0.019265,
+      "selective_accuracy": 0.97128216,
+      "decisive_errors": 269,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 5162,
+        "precision_within_decisions": 0.9709415,
+        "errors": 150,
+        "mean_confidence": 0.91027779
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 4205,
+        "precision_within_decisions": 0.97170036,
+        "errors": 119,
+        "mean_confidence": 0.88974614
+      }
+    },
+    {
+      "threshold": 0.6,
+      "total_records": 9551,
+      "decisive_records": 9149,
+      "uncertain_records": 402,
+      "coverage": 0.95791017,
+      "uncertain_rate": 0.04208983,
+      "selective_accuracy": 0.97813969,
+      "decisive_errors": 200,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 5059,
+        "precision_within_decisions": 0.97825657,
+        "errors": 110,
+        "mean_confidence": 0.91716128
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 4090,
+        "precision_within_decisions": 0.97799511,
+        "errors": 90,
+        "mean_confidence": 0.89859448
+      }
+    },
+    {
+      "threshold": 0.65,
+      "total_records": 9551,
+      "decisive_records": 8933,
+      "uncertain_records": 618,
+      "coverage": 0.93529473,
+      "uncertain_rate": 0.06470527,
+      "selective_accuracy": 0.98298444,
+      "decisive_errors": 152,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 4962,
+        "precision_within_decisions": 0.98286981,
+        "errors": 85,
+        "mean_confidence": 0.92281256
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 3971,
+        "precision_within_decisions": 0.98312768,
+        "errors": 67,
+        "mean_confidence": 0.90684996
+      }
+    },
+    {
+      "threshold": 0.7,
+      "total_records": 9551,
+      "decisive_records": 8687,
+      "uncertain_records": 864,
+      "coverage": 0.90953827,
+      "uncertain_rate": 0.09046173,
+      "selective_accuracy": 0.98676183,
+      "decisive_errors": 115,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 4838,
+        "precision_within_decisions": 0.98739148,
+        "errors": 61,
+        "mean_confidence": 0.92916174
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 3849,
+        "precision_within_decisions": 0.98597038,
+        "errors": 54,
+        "mean_confidence": 0.91416074
+      }
+    },
+    {
+      "threshold": 0.75,
+      "total_records": 9551,
+      "decisive_records": 8356,
+      "uncertain_records": 1195,
+      "coverage": 0.87488221,
+      "uncertain_rate": 0.12511779,
+      "selective_accuracy": 0.99162279,
+      "decisive_errors": 70,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 4686,
+        "precision_within_decisions": 0.99146394,
+        "errors": 40,
+        "mean_confidence": 0.935806
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 3670,
+        "precision_within_decisions": 0.99182561,
+        "errors": 30,
+        "mean_confidence": 0.92345264
+      }
+    },
+    {
+      "threshold": 0.8,
+      "total_records": 9551,
+      "decisive_records": 7943,
+      "uncertain_records": 1608,
+      "coverage": 0.83164067,
+      "uncertain_rate": 0.16835933,
+      "selective_accuracy": 0.99408284,
+      "decisive_errors": 47,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 4508,
+        "precision_within_decisions": 0.99423248,
+        "errors": 26,
+        "mean_confidence": 0.94206513
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 3435,
+        "precision_within_decisions": 0.99388646,
+        "errors": 21,
+        "mean_confidence": 0.93352089
+      }
+    },
+    {
+      "threshold": 0.85,
+      "total_records": 9551,
+      "decisive_records": 7310,
+      "uncertain_records": 2241,
+      "coverage": 0.76536488,
+      "uncertain_rate": 0.23463512,
+      "selective_accuracy": 0.99699042,
+      "decisive_errors": 22,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 4221,
+        "precision_within_decisions": 0.99715707,
+        "errors": 12,
+        "mean_confidence": 0.94979879
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 3089,
+        "precision_within_decisions": 0.99676271,
+        "errors": 10,
+        "mean_confidence": 0.94549727
+      }
+    },
+    {
+      "threshold": 0.9,
+      "total_records": 9551,
+      "decisive_records": 6300,
+      "uncertain_records": 3251,
+      "coverage": 0.65961679,
+      "uncertain_rate": 0.34038321,
+      "selective_accuracy": 0.9984127,
+      "decisive_errors": 10,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 3695,
+        "precision_within_decisions": 0.99837618,
+        "errors": 6,
+        "mean_confidence": 0.96020279
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 2605,
+        "precision_within_decisions": 0.99846449,
+        "errors": 4,
+        "mean_confidence": 0.95817811
+      }
+    },
+    {
+      "threshold": 0.95,
+      "total_records": 9551,
+      "decisive_records": 4217,
+      "uncertain_records": 5334,
+      "coverage": 0.44152445,
+      "uncertain_rate": 0.55847555,
+      "selective_accuracy": 1.0,
+      "decisive_errors": 0,
+      "fake_decisions": {
+        "predicted_label": 0,
+        "records": 2546,
+        "precision_within_decisions": 1.0,
+        "errors": 0,
+        "mean_confidence": 0.97447896
+      },
+      "real_decisions": {
+        "predicted_label": 1,
+        "records": 1671,
+        "precision_within_decisions": 1.0,
+        "errors": 0,
+        "mean_confidence": 0.975399
+      }
+    }
+  ],
+  "calibration": {
+    "brier_score": 0.03539843,
+    "log_loss": 0.14707757,
+    "expected_calibration_error_top_class": 0.06894925,
+    "bins_for_real_label_probability": [
+      {
+        "mean_real_probability": 0.03979721,
+        "observed_real_frequency": 0.00162382,
+        "absolute_gap": 0.03817339
+      },
+      {
+        "mean_real_probability": 0.14036866,
+        "observed_real_frequency": 0.02460025,
+        "absolute_gap": 0.11576842
+      },
+      {
+        "mean_real_probability": 0.2471063,
+        "observed_real_frequency": 0.10606061,
+        "absolute_gap": 0.14104569
+      },
+      {
+        "mean_real_probability": 0.34554563,
+        "observed_real_frequency": 0.22171946,
+        "absolute_gap": 0.12382618
+      },
+      {
+        "mean_real_probability": 0.45015207,
+        "observed_real_frequency": 0.4375,
+        "absolute_gap": 0.01265207
+      },
+      {
+        "mean_real_probability": 0.55106943,
+        "observed_real_frequency": 0.65714286,
+        "absolute_gap": 0.10607342
+      },
+      {
+        "mean_real_probability": 0.64998645,
+        "observed_real_frequency": 0.85062241,
+        "absolute_gap": 0.20063595
+      },
+      {
+        "mean_real_probability": 0.7535276,
+        "observed_real_frequency": 0.92028986,
+        "absolute_gap": 0.16676226
+      },
+      {
+        "mean_real_probability": 0.85613288,
+        "observed_real_frequency": 0.97951807,
+        "absolute_gap": 0.12338519
+      },
+      {
+        "mean_real_probability": 0.95817811,
+        "observed_real_frequency": 0.99846449,
+        "absolute_gap": 0.04028638
+      }
+    ]
+  },
+  "policy_review": {
+    "selection_status": "not_selected",
+    "note": "These are validation-only measurements. No runtime threshold or display label has been changed.",
+    "candidate_rows": [
+      {
+        "threshold": 0.65,
+        "total_records": 9551,
+        "decisive_records": 8933,
+        "uncertain_records": 618,
+        "coverage": 0.93529473,
+        "uncertain_rate": 0.06470527,
+        "selective_accuracy": 0.98298444,
+        "decisive_errors": 152,
+        "fake_decisions": {
+          "predicted_label": 0,
+          "records": 4962,
+          "precision_within_decisions": 0.98286981,
+          "errors": 85,
+          "mean_confidence": 0.92281256
+        },
+        "real_decisions": {
+          "predicted_label": 1,
+          "records": 3971,
+          "precision_within_decisions": 0.98312768,
+          "errors": 67,
+          "mean_confidence": 0.90684996
+        }
+      },
+      {
+        "threshold": 0.7,
+        "total_records": 9551,
+        "decisive_records": 8687,
+        "uncertain_records": 864,
+        "coverage": 0.90953827,
+        "uncertain_rate": 0.09046173,
+        "selective_accuracy": 0.98676183,
+        "decisive_errors": 115,
+        "fake_decisions": {
+          "predicted_label": 0,
+          "records": 4838,
+          "precision_within_decisions": 0.98739148,
+          "errors": 61,
+          "mean_confidence": 0.92916174
+        },
+        "real_decisions": {
+          "predicted_label": 1,
+          "records": 3849,
+          "precision_within_decisions": 0.98597038,
+          "errors": 54,
+          "mean_confidence": 0.91416074
+        }
+      },
+      {
+        "threshold": 0.75,
+        "total_records": 9551,
+        "decisive_records": 8356,
+        "uncertain_records": 1195,
+        "coverage": 0.87488221,
+        "uncertain_rate": 0.12511779,
+        "selective_accuracy": 0.99162279,
+        "decisive_errors": 70,
+        "fake_decisions": {
+          "predicted_label": 0,
+          "records": 4686,
+          "precision_within_decisions": 0.99146394,
+          "errors": 40,
+          "mean_confidence": 0.935806
+        },
+        "real_decisions": {
+          "predicted_label": 1,
+          "records": 3670,
+          "precision_within_decisions": 0.99182561,
+          "errors": 30,
+          "mean_confidence": 0.92345264
+        }
+      },
+      {
+        "threshold": 0.8,
+        "total_records": 9551,
+        "decisive_records": 7943,
+        "uncertain_records": 1608,
+        "coverage": 0.83164067,
+        "uncertain_rate": 0.16835933,
+        "selective_accuracy": 0.99408284,
+        "decisive_errors": 47,
+        "fake_decisions": {
+          "predicted_label": 0,
+          "records": 4508,
+          "precision_within_decisions": 0.99423248,
+          "errors": 26,
+          "mean_confidence": 0.94206513
+        },
+        "real_decisions": {
+          "predicted_label": 1,
+          "records": 3435,
+          "precision_within_decisions": 0.99388646,
+          "errors": 21,
+          "mean_confidence": 0.93352089
+        }
+      },
+      {
+        "threshold": 0.85,
+        "total_records": 9551,
+        "decisive_records": 7310,
+        "uncertain_records": 2241,
+        "coverage": 0.76536488,
+        "uncertain_rate": 0.23463512,
+        "selective_accuracy": 0.99699042,
+        "decisive_errors": 22,
+        "fake_decisions": {
+          "predicted_label": 0,
+          "records": 4221,
+          "precision_within_decisions": 0.99715707,
+          "errors": 12,
+          "mean_confidence": 0.94979879
+        },
+        "real_decisions": {
+          "predicted_label": 1,
+          "records": 3089,
+          "precision_within_decisions": 0.99676271,
+          "errors": 10,
+          "mean_confidence": 0.94549727
+        }
+      },
+      {
+        "threshold": 0.9,
+        "total_records": 9551,
+        "decisive_records": 6300,
+        "uncertain_records": 3251,
+        "coverage": 0.65961679,
+        "uncertain_rate": 0.34038321,
+        "selective_accuracy": 0.9984127,
+        "decisive_errors": 10,
+        "fake_decisions": {
+          "predicted_label": 0,
+          "records": 3695,
+          "precision_within_decisions": 0.99837618,
+          "errors": 6,
+          "mean_confidence": 0.96020279
+        },
+        "real_decisions": {
+          "predicted_label": 1,
+          "records": 2605,
+          "precision_within_decisions": 0.99846449,
+          "errors": 4,
+          "mean_confidence": 0.95817811
+        }
+      }
+    ]
+  },
+  "dataset_preparation": {
+    "source_dataset": "E:\\Repos\\FakeNews\\FakeNewsDetection\\data\\raw\\WELFake_Dataset.csv",
+    "source_md5": "73c9675a4b3d09f86a6933d0b8d7d908",
+    "random_state": 205,
+    "split_fractions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "preprocessing": {
+      "source_rows": 72134,
+      "output_rows": 63672,
+      "removed_duplicate_rows": 8462,
+      "removed_unusable_rows": 0,
+      "fake_rows": 34789,
+      "real_rows": 28883
+    },
+    "manifest_rows": 63672,
+    "split_counts": {
+      "test": 9551,
+      "train": 44570,
+      "validation": 9551
+    },
+    "class_counts": {
+      "test": {
+        "0": 5218,
+        "1": 4333
+      },
+      "train": {
+        "0": 24352,
+        "1": 20218
+      },
+      "validation": {
+        "0": 5219,
+        "1": 4332
+      }
+    },
+    "record_id_algorithm": "SHA-256 over the normalised title/body identity",
+    "manifest_sha256": "84503ca481f57c2de2330438571c4e5f857c382c0b74093320c4990048591e9a"
+  }
+}

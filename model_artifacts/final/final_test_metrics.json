@@ -1,0 +1,188 @@
+{
+  "status": "final_test_complete",
+  "test_split_evaluated": true,
+  "test_evaluation_count": 1,
+  "selected_feature_mode": "combined",
+  "selection_metric": "macro_f1",
+  "validation_candidates": [
+    {
+      "feature_mode": "title",
+      "training_rows": 44570,
+      "validation_rows": 9551,
+      "feature_count": 68597,
+      "classifier_iterations": [
+        6
+      ],
+      "fit_seconds": 8.5129,
+      "validation_prediction_seconds": 1.5428,
+      "metrics": {
+        "accuracy": 0.90859596,
+        "macro_precision": 0.90814813,
+        "macro_recall": 0.90732016,
+        "macro_f1": 0.9077096,
+        "weighted_precision": 0.9085514,
+        "weighted_recall": 0.90859596,
+        "weighted_f1": 0.90854956,
+        "confusion_matrix": [
+          [
+            4807,
+            412
+          ],
+          [
+            461,
+            3871
+          ]
+        ],
+        "per_class": {
+          "0_fake": {
+            "precision": 0.9124905087319666,
+            "recall": 0.9210576738838858,
+            "f1": 0.9167540764756364,
+            "support": 5219
+          },
+          "1_real": {
+            "precision": 0.9038057436376372,
+            "recall": 0.8935826408125577,
+            "f1": 0.8986651189785259,
+            "support": 4332
+          }
+        }
+      }
+    },
+    {
+      "feature_mode": "text",
+      "training_rows": 44570,
+      "validation_rows": 9551,
+      "feature_count": 100000,
+      "classifier_iterations": [
+        6
+      ],
+      "fit_seconds": 70.7139,
+      "validation_prediction_seconds": 10.6002,
+      "metrics": {
+        "accuracy": 0.95382682,
+        "macro_precision": 0.95354943,
+        "macro_recall": 0.953278,
+        "macro_f1": 0.9534113,
+        "weighted_precision": 0.95381775,
+        "weighted_recall": 0.95382682,
+        "weighted_f1": 0.95381991,
+        "confusion_matrix": [
+          [
+            5006,
+            213
+          ],
+          [
+            228,
+            4104
+          ]
+        ],
+        "per_class": {
+          "0_fake": {
+            "precision": 0.9564386702330914,
+            "recall": 0.9591875838283196,
+            "f1": 0.9578111546924328,
+            "support": 5219
+          },
+          "1_real": {
+            "precision": 0.9506601806810285,
+            "recall": 0.9473684210526315,
+            "f1": 0.9490114464099896,
+            "support": 4332
+          }
+        }
+      }
+    },
+    {
+      "feature_mode": "combined",
+      "training_rows": 44570,
+      "validation_rows": 9551,
+      "feature_count": 100000,
+      "classifier_iterations": [
+        6
+      ],
+      "fit_seconds": 67.6813,
+      "validation_prediction_seconds": 10.4305,
+      "metrics": {
+        "accuracy": 0.96272642,
+        "macro_precision": 0.96269012,
+        "macro_recall": 0.96208828,
+        "macro_f1": 0.9623781,
+        "weighted_precision": 0.96272397,
+        "weighted_recall": 0.96272642,
+        "weighted_f1": 0.96271429,
+        "confusion_matrix": [
+          [
+            5057,
+            162
+          ],
+          [
+            194,
+            4138
+          ]
+        ],
+        "per_class": {
+          "0_fake": {
+            "precision": 0.9630546562559512,
+            "recall": 0.9689595707990036,
+            "f1": 0.9659980897803248,
+            "support": 5219
+          },
+          "1_real": {
+            "precision": 0.9623255813953489,
+            "recall": 0.9552169898430286,
+            "f1": 0.958758109360519,
+            "support": 4332
+          }
+        }
+      }
+    }
+  ],
+  "held_out_test": {
+    "feature_mode": "combined",
+    "test_rows": 9551,
+    "prediction_seconds": 8.6508,
+    "mean_prediction_milliseconds": 0.905746,
+    "metrics": {
+      "accuracy": 0.96419223,
+      "macro_precision": 0.96391595,
+      "macro_recall": 0.96384298,
+      "macro_f1": 0.96387929,
+      "weighted_precision": 0.96418976,
+      "weighted_recall": 0.96419223,
+      "weighted_f1": 0.96419082,
+      "confusion_matrix": [
+        [
+          5049,
+          169
+        ],
+        [
+          173,
+          4160
+        ]
+      ],
+      "per_class": {
+        "0_fake": {
+          "precision": 0.9668709306779012,
+          "recall": 0.967612111920276,
+          "f1": 0.9672413793103448,
+          "support": 5218
+        },
+        "1_real": {
+          "precision": 0.960960960960961,
+          "recall": 0.9600738518347565,
+          "f1": 0.9605172015700761,
+          "support": 4333
+        }
+      }
+    },
+    "probability_shape": [
+      9551,
+      2
+    ],
+    "classes": [
+      0,
+      1
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Something went wrong | Signal Check{% endblock %}
+{% block content %}
+<section class="error-state glass-panel">
+    <span class="section-kicker">Request error</span>
+    <h1>{{ title|default('Something went wrong') }}</h1>
+    <p>{{ message|default('The request could not be completed.') }}</p>
+    <a class="primary-button" href="{{ url_for('main.home') }}">Return to classifier</a>
+</section>
+{% endblock %}

@@ -1,0 +1,202 @@
+{
+  "status": "validation_only",
+  "test_split_evaluated": false,
+  "selection_metric": "macro_f1",
+  "selected_feature_mode": "combined",
+  "configuration": {
+    "max_features": 100000,
+    "ngram_min": 1,
+    "ngram_max": 2,
+    "min_df": 2,
+    "max_df": 0.98,
+    "sublinear_tf": true,
+    "strip_accents": "unicode",
+    "solver": "liblinear",
+    "classifier_c": 1.0,
+    "max_iterations": 1000
+  },
+  "candidates": [
+    {
+      "feature_mode": "title",
+      "training_rows": 44570,
+      "validation_rows": 9551,
+      "feature_count": 68597,
+      "classifier_iterations": [
+        6
+      ],
+      "fit_seconds": 8.5129,
+      "validation_prediction_seconds": 1.5428,
+      "metrics": {
+        "accuracy": 0.90859596,
+        "macro_precision": 0.90814813,
+        "macro_recall": 0.90732016,
+        "macro_f1": 0.9077096,
+        "weighted_precision": 0.9085514,
+        "weighted_recall": 0.90859596,
+        "weighted_f1": 0.90854956,
+        "confusion_matrix": [
+          [
+            4807,
+            412
+          ],
+          [
+            461,
+            3871
+          ]
+        ],
+        "per_class": {
+          "0_fake": {
+            "precision": 0.9124905087319666,
+            "recall": 0.9210576738838858,
+            "f1": 0.9167540764756364,
+            "support": 5219
+          },
+          "1_real": {
+            "precision": 0.9038057436376372,
+            "recall": 0.8935826408125577,
+            "f1": 0.8986651189785259,
+            "support": 4332
+          }
+        }
+      }
+    },
+    {
+      "feature_mode": "text",
+      "training_rows": 44570,
+      "validation_rows": 9551,
+      "feature_count": 100000,
+      "classifier_iterations": [
+        6
+      ],
+      "fit_seconds": 70.7139,
+      "validation_prediction_seconds": 10.6002,
+      "metrics": {
+        "accuracy": 0.95382682,
+        "macro_precision": 0.95354943,
+        "macro_recall": 0.953278,
+        "macro_f1": 0.9534113,
+        "weighted_precision": 0.95381775,
+        "weighted_recall": 0.95382682,
+        "weighted_f1": 0.95381991,
+        "confusion_matrix": [
+          [
+            5006,
+            213
+          ],
+          [
+            228,
+            4104
+          ]
+        ],
+        "per_class": {
+          "0_fake": {
+            "precision": 0.9564386702330914,
+            "recall": 0.9591875838283196,
+            "f1": 0.9578111546924328,
+            "support": 5219
+          },
+          "1_real": {
+            "precision": 0.9506601806810285,
+            "recall": 0.9473684210526315,
+            "f1": 0.9490114464099896,
+            "support": 4332
+          }
+        }
+      }
+    },
+    {
+      "feature_mode": "combined",
+      "training_rows": 44570,
+      "validation_rows": 9551,
+      "feature_count": 100000,
+      "classifier_iterations": [
+        6
+      ],
+      "fit_seconds": 67.6813,
+      "validation_prediction_seconds": 10.4305,
+      "metrics": {
+        "accuracy": 0.96272642,
+        "macro_precision": 0.96269012,
+        "macro_recall": 0.96208828,
+        "macro_f1": 0.9623781,
+        "weighted_precision": 0.96272397,
+        "weighted_recall": 0.96272642,
+        "weighted_f1": 0.96271429,
+        "confusion_matrix": [
+          [
+            5057,
+            162
+          ],
+          [
+            194,
+            4138
+          ]
+        ],
+        "per_class": {
+          "0_fake": {
+            "precision": 0.9630546562559512,
+            "recall": 0.9689595707990036,
+            "f1": 0.9659980897803248,
+            "support": 5219
+          },
+          "1_real": {
+            "precision": 0.9623255813953489,
+            "recall": 0.9552169898430286,
+            "f1": 0.958758109360519,
+            "support": 4332
+          }
+        }
+      }
+    }
+  ],
+  "environment": {
+    "python": "3.11.0",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit_learn": "1.5.2",
+    "joblib": "1.4.2",
+    "pandas": "2.2.3"
+  },
+  "dataset_preparation": {
+    "source_dataset": "E:\\Repos\\FakeNews\\FakeNewsDetection\\data\\raw\\WELFake_Dataset.csv",
+    "source_md5": "73c9675a4b3d09f86a6933d0b8d7d908",
+    "random_state": 205,
+    "split_fractions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "preprocessing": {
+      "source_rows": 72134,
+      "output_rows": 63672,
+      "removed_duplicate_rows": 8462,
+      "removed_unusable_rows": 0,
+      "fake_rows": 34789,
+      "real_rows": 28883
+    },
+    "manifest_rows": 63672,
+    "split_counts": {
+      "test": 9551,
+      "train": 44570,
+      "validation": 9551
+    },
+    "class_counts": {
+      "test": {
+        "0": 5218,
+        "1": 4333
+      },
+      "train": {
+        "0": 24352,
+        "1": 20218
+      },
+      "validation": {
+        "0": 5219,
+        "1": 4332
+      }
+    },
+    "record_id_algorithm": "SHA-256 over the normalised title/body identity",
+    "manifest_sha256": "84503ca481f57c2de2330438571c4e5f857c382c0b74093320c4990048591e9a"
+  },
+  "selected_pipeline_sha256": "ca36217f1e901ef4dc19ccd2e53233320654591c80482db0d9a270a43950051f",
+  "selected_pipeline_path": "E:\\Repos\\FakeNews\\FakeNewsDetection\\model_artifacts\\experiments\\selected_validation_pipeline.joblib"
+}
