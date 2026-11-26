@@ -4,12 +4,12 @@
     --ink-1: #c8d2e3;
     --ink-2: #8795aa;
     --surface-0: #06101d;
-    --surface-1: rgba(12, 25, 43, 0.74);
-    --surface-2: rgba(17, 35, 58, 0.62);
+    --surface: #5c5c5c;
+    --surface-2: #cfd5dd;
     --stroke: rgba(179, 207, 246, 0.15);
     --stroke-strong: rgba(179, 207, 246, 0.28);
-    --brand: #57a8ff;
-    --brand-bright: #8ec8ff;
+    --brand: #aeb3ba;
+    --brand-light: #d9dee4;
     --cyan: #55e4d4;
     --success: #61dbab;
     --danger: #ff7a91;
@@ -19,7 +19,10 @@
     --radius-lg: 20px;
     --radius-md: 14px;
     --shell: 1180px;
-    font-family: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+    --text-color: #222222;
+    --text-soft: #777777;
+    --page-background: #f5f7fa;
+    font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -36,6 +39,10 @@ body {
     background: radial-gradient(circle at 14% 11%, rgba(49, 126, 225, 0.16), transparent 31rem), radial-gradient(circle at 88% 26%, rgba(36, 214, 190, 0.10), transparent 27rem), linear-gradient(145deg, #050b14 0%, #071321 52%, #091525 100%);
     color: var(--ink-0);
     overflow-x: hidden;
+    background-image:url("../images/Background.gif");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
     body::before {
@@ -50,6 +57,41 @@ body {
 
 a {
     color: inherit;
+}
+
+.logo-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    margin-top:20px;
+}
+
+.logo-container img{
+
+    width:140px;
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:18px;
+
+    border:4px solid white;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.35);
+}
+
+.logo-container img{
+
+    width:140px;
+
+    border:5px solid red;
+
+    background:yellow;
 }
 
 button, input, textarea {
@@ -110,12 +152,18 @@ button {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
 }
 
-.glass-panel, .glass-strip {
-    background: linear-gradient(145deg, rgba(18, 36, 59, .72), rgba(10, 23, 40, .54));
-    border: 1px solid var(--stroke);
-    box-shadow: var(--shadow), inset 0 1px rgba(255,255,255,.05);
-    backdrop-filter: blur(24px) saturate(135%);
-    -webkit-backdrop-filter: blur(24px) saturate(135%);
+.glass-panel,
+.glass-strip {
+
+    background:rgba(92,92,92,.72);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
 }
 
 .site-header {
@@ -379,6 +427,9 @@ h1 {
     min-height: 620px;
     padding: 30px;
     border-radius: var(--radius-xl);
+    border-radius: 20px;
+    border:2px solid rgba(255,255,255,.1);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 .classifier-card {
@@ -434,8 +485,8 @@ input, textarea {
     border: 1px solid var(--stroke);
     border-radius: var(--radius-md);
     outline: none;
-    background: rgba(4,12,22,.48);
-    color: var(--ink-0);
+    background:#f6f6f6;
+    color: #222222;
     transition: border-color .2s, box-shadow .2s, background .2s;
 }
 
@@ -452,7 +503,7 @@ textarea {
 }
 
     input::placeholder, textarea::placeholder {
-        color: #607086;
+        color: #666;
     }
 
     input:focus, textarea:focus {
@@ -490,16 +541,20 @@ textarea {
     font-weight: 650;
 }
 
-.primary-button {
-    padding: 0 18px;
-    background: linear-gradient(135deg, #2387ed, #52a9ff);
-    color: white;
-    box-shadow: 0 14px 30px rgba(35,135,237,.25), inset 0 1px rgba(255,255,255,.25);
-}
+    .primary-button {
+
+        background:#aeb3ba;
+
+        color:#222222;
+
+        box-shadow:0 4px 8px rgba(0,0,0,.3);
+    }
 
     .primary-button:hover {
-        filter: brightness(1.08);
-        transform: translateY(-1px);
+
+        background:#c7ccd2;
+
+        transform:translateY(-2px);
     }
 
     .primary-button:disabled {
@@ -541,6 +596,7 @@ textarea {
 .result-card {
     position: relative;
     overflow: hidden;
+    border-radius: 20px
 }
 
     .result-card::after {
@@ -680,10 +736,14 @@ textarea {
 }
 
     .probability-grid div {
-        padding: 17px;
-        border: 1px solid rgba(255,255,255,.07);
+
+        background: #cfd5dd;
+
+        color: #222222;
+
+        border: 2px solid #777;
+
         border-radius: 16px;
-        background: rgba(255,255,255,.025);
     }
 
     .probability-grid span, .probability-grid strong {
@@ -918,7 +978,12 @@ textarea {
     }
 
     .header-inner {
-        align-items: flex-start;
+
+        background:#5c5c5c;
+
+        border-radius:20px;
+
+        border:1px solid #888;
     }
 
     .brand-caption, .site-nav a {
@@ -969,9 +1034,12 @@ textarea {
             text-align: left;
         }
 
-    .confidence-block strong {
-        font-size: 48px;
-    }
+        .confidence-block strong {
+
+            font-size:64px;
+
+            color:white;
+        }
 }
 
 @media (prefers-reduced-motion: reduce) {
